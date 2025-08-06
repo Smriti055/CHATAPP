@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: CHATAPP
+    env: node
+    rootDir: .  # 👈 this makes sure Render uses the root
+    buildCommand: npm run build
+    startCommand: npm start
+    plan: free
+    buildEnvVars:
+      - key: NODE_VERSION
+        value: 18
